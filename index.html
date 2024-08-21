@@ -210,7 +210,7 @@
                     </div>
 
                     <div class="form-group full-width">
-                        <button type="submit">Send message</button>
+                        <button type="submit" onclick="sendSusses()">Send message</button>
                     </div>
 
                 </fieldset>
@@ -218,11 +218,40 @@
         </div>
     </section>
 
+    <button id="back-to-top" class="back-to-top">↑</button>
+
     <footer id="footer"  class=" footer white-bg">
         <p><a href="https://github.com/SilvaTayane">Feito com <span class="heart">❤</span> por Tayane Silva</a></p>
     </footer>
 
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Botão "Voltar ao Início" -->
+    <script>
+        function sendSusses(){
+            swal("Enviado com Sucesso!", "Enviado para o seu Email!", "success");
+        }
+
+        //Botao voltar inicio
+        const backToTopButton = document.getElementById('back-to-top');
+    
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+    
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+    
 
 </body>
 
