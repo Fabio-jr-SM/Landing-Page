@@ -13,7 +13,7 @@
   justify-content: center;
 }
 
-.intro-img img {
+.intro-img img, svg {
   max-width: 100%;
   height: auto;
 }
